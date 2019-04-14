@@ -9,12 +9,12 @@ int fillwater(int ju1,int ju2,int w)
 	int m,n;
 	m=n=0;
 	int gcd=__gcd(ju1,ju2);
-	if(w%gcd!=0)
+	if(w%gcd!=0 || max(ju1,ju2)<w)
 	{
 		cout<<"Not possible\n";
 		return -1;
 	}
-	if(w%gcd==0)
+	else
 	{
 		m=ju1;
 		count++;
